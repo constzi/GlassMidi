@@ -1,5 +1,8 @@
 package com.glass.midi.control;
-//about voice trigger with expected reply: https://developers.google.com/glass/develop/gdk/input/voice#setting_constraints
+//more info @ http://stackoverflow.com/questions/18112932/android-client-and-server-side-programming
+//*** MAKE SURE BLUETOOTH OFF ON PHONE SO THAT GLASS CAN CONNECT WITH PC! ***
+// check out if u want more crazy stuff: https://developers.google.com/glass/tools-downloads/subscription-proxy 
+// & http://www.justinribeiro.com/chronicle/2013/07/07/weekend-fun-google-glass-controlling-a-network-connected-arduino/
 
 // Glass Specific
 import java.io.BufferedWriter;
@@ -47,7 +50,7 @@ public class MainActivity extends Activity {
 		Thread cThread = new Thread(new ClientThread());  
         cThread.start(); 
 	}
-	//*** MAKE SURE BLUETOOTH OFF ON PHONE SO THAT GLASS CAN CONNECT WITH PC! ***
+
     public class ClientThread implements Runnable {  
         public void run() {  
             try {  
